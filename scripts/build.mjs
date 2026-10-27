@@ -1,0 +1,12 @@
+import {readFile, mkdir, cp, rm, writeFile} from 'node:fs/promises';
+import {validateData} from '../src/model.js';
+const root=new URL('../',import.meta.url);
+const data=JSON.parse(await readFile(new URL('data/competitor_data.json',root),'utf8'));
+validateData(data);
+const html=await readFile(new URL('index.html',root),'utf8');
+if (/\/(Users|workspace)\//.test(html)) throw Error('Local path in page');
+await rm(new URL('dist/',root),{recursive:true,force:true});
+await mkdir(new URL('dist/',root));
+for(const name of ['index.html','favicon.svg','src','data']) await cp(new URL(name,root),new URL('dist/'+name,root),{recursive:true});
+await writeFile(new URL('dist/.nojekyll',root),'');
+console.log(`Production build complete: ${data.competitors.length} competitors, ${data.pricing_offers.length} offers. Relative assets support repository subpaths.`);

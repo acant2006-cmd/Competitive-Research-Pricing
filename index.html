@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101314">
+  <meta name="description" content="Explore real competitor pricing and test tentative price positions for an AI fitness venture. Research snapshot from October 27, 2026.">
+  <title>Competitive Pricing Intelligence · Andre Cantave</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<a href="#main" class="skip">Skip to analytics</a>
+<aside class="sidebar">
+  <a class="brand" href="#overview" aria-label="Pricing Intelligence overview"><span class="brand-mark">p<span>i</span></span><div>Pricing<span>Intelligence</span></div></a>
+  <div class="workspace"><span class="eyebrow">VENTURE WORKSPACE</span><strong>AI fitness app</strong><small>Andre Cantave · Mission 2</small></div>
+  <nav aria-label="Main navigation">
+    <a href="#overview" data-page="overview"><span data-icon="grid"></span>Executive overview</a>
+    <a href="#landscape" data-page="landscape"><span data-icon="users"></span>Competitor landscape</a>
+    <a href="#pricing" data-page="pricing"><span data-icon="chart"></span>Pricing comparison</a>
+    <a href="#explorer" data-page="explorer"><span data-icon="sliders"></span>Price position explorer<span class="nav-dot"></span></a>
+    <a href="#opportunities" data-page="opportunities"><span data-icon="spark"></span>Opportunities</a>
+    <a href="#sources" data-page="sources"><span data-icon="book"></span>Sources & methodology</a>
+  </nav>
+  <div class="sidebar-bottom"><span class="live-dot"></span>Research snapshot<strong>27 October 2026</strong><p>Observed prices, not a live feed.</p><a href="./data/competitor_data.json" download>Download research JSON <span aria-hidden="true">↗</span></a></div>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <b id="breadcrumb">Executive overview</b></div><a class="quiet-link" href="#sources">Methodology <span aria-hidden="true">↗</span></a><span class="avatar" title="Andre Cantave">AC</span></header>
+  <main id="main" tabindex="-1">
+    <div id="loading" class="loading">Loading your competitive research…</div>
+    <div id="application" hidden>
+      <div class="page-heading"><div><div class="eyebrow"><span class="tiny-square"></span> COMPETITIVE PRICING INTELLIGENCE</div><h1 id="page-title">Know the market.<br><span>Find your position.</span></h1><p id="page-description">A clear view of the alternatives competing for your customers.</p></div><div class="snapshot-label">RESEARCH SNAPSHOT<strong>OCT 27, 2026</strong><span>United States · USD</span></div></div>
+      <section class="filterbar" aria-label="Research filters">
+        <label class="search"><span data-icon="search"></span><input id="search" type="search" placeholder="Search competitors or products…" aria-label="Search competitors or products"></label>
+        <label><span class="sr-only">Competitor relationship</span><select id="type-filter"><option value="">All competitors</option><option>Direct</option> <option>Indirect</option></select></label>
+        <label><span class="sr-only">Market positioning</span><select id="position-filter"><option value="">All positions</option><option>Lower-priced</option><option>Mid-market</option><option>Premium</option><option>Freemium</option></select></label>
+        <label><span class="sr-only">Billing comparison</span><select id="basis"><option value="monthly">Monthly billing</option><option value="annual">Annual billing</option></select></label>
+        <button class="icon-button" id="reset" title="Reset research filters" aria-label="Reset research filters"><span data-icon="reset"></span></button>
+      </section>
+      <div class="scope-line"><span id="scope-label"></span><label class="check-label"><input type="checkbox" id="partial">Include partially verified prices</label></div>
+      <section id="overview" class="view" aria-label="Executive overview"></section>
+      <section id="landscape" class="view" aria-label="Competitor landscape" hidden></section>
+      <section id="pricing" class="view" aria-label="Pricing comparison" hidden></section>
+      <section id="explorer" class="view" aria-label="Price position explorer" hidden></section>
+      <section id="opportunities" class="view" aria-label="Competitive opportunities" hidden></section>
+      <section id="sources" class="view" aria-label="Research sources and methodology" hidden></section>
+      <footer class="footer"><span>COMPETITIVE INTELLIGENCE / MISSION 02</span><span>Evidence first. Exploration second.</span></footer>
+    </div>
+  </main>
+</div>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"><button class="dialog-close icon-button" aria-label="Close details">×</button><div id="dialog-content"></div></dialog>
+<div id="announcement" class="sr-only" aria-live="polite"></div>
+<noscript><p>This interactive dashboard requires JavaScript. The <a href="./data/competitor_data.json">research dataset</a> remains available.</p></noscript>
+<script type="module" src="./src/app.js"></script>
+</body></html>
