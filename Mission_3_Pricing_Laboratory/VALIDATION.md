@@ -1,6 +1,6 @@
 # Mission 3 validation
 
-Checked October 27, 2026. Public release of the labeled example financial assumptions was explicitly approved by the student after the automatic review rejection. Deployment verification is recorded separately.
+Checked October 27, 2026. Public release of the labeled example financial assumptions was explicitly approved by the student after the automatic review rejection. Deployment and live desktop verification are recorded below.
 
 ## Research and source checks
 
@@ -39,5 +39,14 @@ Eight simulated DOM/event tests exercise all seven views, slider/numeric edits, 
 - Production static build succeeded. No CDN, external runtime dependency, secret key, backend or account login is required.
 - Relative assets and hash navigation support deployment below `/Competitive-Research-Pricing/laboratory/`.
 - Automatic approval review rejected the proposed public GitHub source upload because it includes unconfirmed financial assumptions. The student then explicitly approved publication. No private student financial inputs or confirmed decision are included in source.
-- Actual browser interaction, native downloads, narrow-screen rendering and published-site checks remain pending. Simulated tests do not establish browser or mobile behavior.
+- Live desktop browser checks passed for loading, navigation, cost search, keyboard cost slider changes, price edits, financial charts, scenario loading, competitor verification controls, stale reviews, required justification, warning acknowledgment, confirmation in isolated QA mode, both native download events, and persistence after reload.
+- Physical mobile-device and narrow-viewport visual testing remain unverified. Responsive CSS breakpoints are implemented; browser zoom shortcuts did not change the available test viewport.
 - Models use constant costs and steady monthly quantities. Real taxes, financing, free users, churn, customer acquisition, capacity limits and invoice timing require additional modeling and evidence.
+
+## Deployment and final student state
+
+GitHub Actions run 40575415264 succeeded for commit f798755b816a4f6698ed224dcf44d46ba756dd50. The live laboratory was opened and inspected at https://acant2006-cmd.github.io/Competitive-Research-Pricing/laboratory/. Mission 2 remains at the repository site root.
+
+Native browser clicks produced both DOCX and JSON downloads. Their shared serializer was separately tested for ZIP CRC, XML validity, matching snapshot IDs and content consistency, and the ten-page DOCX test fixture was rendered and inspected. Browser download bytes reside in a separate browser environment; no claim is made that those specific bytes were re-read in the build environment.
+
+All live financial edits and test confirmation used `?test=1`, which uses a separate local-storage key and labels exported reports as test fixtures. The normal student view was opened separately and showed “Your model has not been evaluated.” No final decision was confirmed for the student. The original venture website repository was inspected read-only and never modified. Mission 4 was not started.
