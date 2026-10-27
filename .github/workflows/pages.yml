@@ -24,6 +24,17 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: Install laboratory
+        working-directory: Mission_3_Pricing_Laboratory
+        run: npm ci
+      - name: Test laboratory
+        working-directory: Mission_3_Pricing_Laboratory
+        run: npm test
+      - name: Build laboratory
+        working-directory: Mission_3_Pricing_Laboratory
+        run: npm run build
+      - name: Add laboratory to Pages
+        run: cp -R Mission_3_Pricing_Laboratory/dist dist/laboratory
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
